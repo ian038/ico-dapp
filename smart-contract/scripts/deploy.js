@@ -1,12 +1,12 @@
 const hre = require("hardhat");
 
 async function main() {
-  const SpartanToken = await hre.ethers.getContractFactory("SpartanToken");
-  const spartanToken = await SpartanToken.deploy();
+  const TrippyDudesToken = await hre.ethers.getContractFactory("TrippyDudesToken");
+  const trippyDudesToken = await TrippyDudesToken.deploy('0x315d812Eb76Fac89E88B2c5a6bEAeFFbC1fE4652');
 
-  await spartanToken.deployed();
+  await trippyDudesToken.deployed();
 
-  console.log("SpartanToken deployed to:", spartanToken.address);
+  console.log("TrippyDudesToken deployed to:", trippyDudesToken.address);
 }
 
 main()
